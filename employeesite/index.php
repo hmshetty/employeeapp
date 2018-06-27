@@ -13,9 +13,9 @@
         $json = file_get_contents("http://employeesvc");
         $employees = json_decode($json)->employees;
         
-            foreach($employees as $emp){
-                echo "<li>$emp</li>";
-            }
+        foreach($employees as $emp){
+            echo "<li>$emp</li>";
+        }
     ?>
     </ul>
 </body>
