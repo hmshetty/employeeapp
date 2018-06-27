@@ -10,7 +10,7 @@
     <h1>Employees</h1>
     <ul>
     <?php
-        $json = file_get_contents("http://employeesvc");
+        $json = file_get_contents("http://employeeapp_svc");
         $employees = json_decode($json)->employees;
         
         foreach($employees as $emp){
