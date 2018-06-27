@@ -14,7 +14,7 @@
         $employees = json_decode($json)->employees;
         
             foreach($employees as $emp){
-                echo "<li>$emp</li>"
+                echo "<li>$emp</li>";
             }
     ?>
     </ul>
