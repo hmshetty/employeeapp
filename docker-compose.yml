@@ -1,7 +1,7 @@
 version: "3"
 services:
   svc:
-    image: reachmanjesh/employeesvc:v1
+    image: reachmanjesh/employeesvc:latest
     deploy:
       placement:
         constraints:
@@ -16,7 +16,7 @@ services:
     ports:
       - "3000:80"
   site:
-    image: reachmanjesh/employeesite:v1
+    image: reachmanjesh/employeesite:latest
     deploy:
       replicas: 2
       resources:
