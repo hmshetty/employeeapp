@@ -1,0 +1,31 @@
+version: "3"
+services:
+  svc:
+    image: reachmanjesh/employeesvc:v1
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+      replicas: 4
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: 100M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "3000:80"
+  site:
+    image: reachmanjesh/employeesite:v1
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: 100M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "80:80"
+ 
+    
